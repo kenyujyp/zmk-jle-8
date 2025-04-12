@@ -65,8 +65,8 @@
 	        , <&right_mux 1 0>                  \
 	        , <&right_mux 2 0>                  \
 	        , <&right_mux 5 0>                  \
-            , <&right_mux 6 0>                  \
             , <&right_mux 7 0>                  \
+            , <&right_mux 6 0>                  \
         ;                                           \
         io-channels = <&adc 1>;                     \
         matrix-relax-us = <3>;                      \
@@ -82,7 +82,7 @@
 
 / {
     model = "Le Zapybara";
-    compatible = "sporkus,le_zapybara", "nordic,nrf52840";
+    compatible = "nordic,nrf52840";
 
     chosen {
         zephyr,code-partition = &code_partition;
