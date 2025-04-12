@@ -12,9 +12,9 @@ config ZMK_KEYBOARD_NAME
     default "EC60BLE"
 
 # ADXL362 accelerometer, need to change this!!!
-config ZMK_SLEEP
-	select ZMK_ADXL362_AWAKE_TRIGGER_SLEEP
-	depends on ZMK_ADXL362_AWAKE_TRIGGER
+# config ZMK_SLEEP
+#	select ZMK_ADXL362_AWAKE_TRIGGER_SLEEP
+#	depends on ZMK_ADXL362_AWAKE_TRIGGER
 
 if ZMK_BATTERY_REPORTING
 
