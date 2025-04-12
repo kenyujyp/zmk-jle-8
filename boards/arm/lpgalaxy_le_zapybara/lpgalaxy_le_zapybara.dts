@@ -82,7 +82,7 @@
     compatible = "nordic,nrf52840";
 
     chosen {
-        zmk,kscan = <&matrix>;
+        
         zephyr,code-partition = &code_partition;
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
@@ -119,7 +119,7 @@
         compatible = "zmk,physical-layout";
 	    display-name = "Standard";
 	    transform = <&transform>;
-	    // kscan = <&matrix>;
+	    kscan = <&matrix>;
 
 	    keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100  250    0       0     0     0>
