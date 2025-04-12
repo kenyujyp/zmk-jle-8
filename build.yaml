@@ -15,5 +15,5 @@
 include:
   - board: lpgalaxy_le_zapybara
   - board: lpgalaxy_le_zapybara
-    snippet: enable_ec_calibrator
-    artifact-name: lpgalaxy_le_zapybara_calibrator
+    snippet: enable_ec_calibrator studio-rpc-usb-uart
+    artifact-name: lpgalaxy_le_zapybara_calibrator 

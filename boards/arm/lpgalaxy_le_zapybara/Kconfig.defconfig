@@ -9,7 +9,7 @@ config BOARD
     default "lpgalaxy_le_zapybara"
 
 config ZMK_KEYBOARD_NAME
-    default "EC60BLE"
+    default "EC60BLE0"
 
 # ADXL362 accelerometer, need to change this!!!
 # config ZMK_SLEEP
