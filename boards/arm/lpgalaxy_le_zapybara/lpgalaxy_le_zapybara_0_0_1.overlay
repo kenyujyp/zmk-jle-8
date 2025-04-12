@@ -40,9 +40,9 @@
     en-gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
 };
 
-&blue_led {
-    gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
-};
+//&blue_led {
+//    gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
+//};
 
 &matrix {
     strobe-gpios
