@@ -89,7 +89,7 @@
 
 / {
     model = "Le Zapybara";
-    compatible = "sporkus,le_zapybara", "nordic,nrf52840";
+    compatible = "lpgalaxy,le_zapybara", "nordic,nrf52840";
 
     chosen {
         zmk,kscan = &matrix;  /* may cause problem */
@@ -204,7 +204,7 @@
     MUX(left_mux)
     MUX(right_mux)
     /* what is this? */
-    EC_MATRIX(matrix, (BIT(0) + BIT(2) + BIT(4) + BIT(5) + BIT(7) + BIT(9)))
+    EC_MATRIX(matrix, (BIT(0) + BIT(1) + BIT(2) + BIT(3) + BIT(4)))
 };
 
 /*
