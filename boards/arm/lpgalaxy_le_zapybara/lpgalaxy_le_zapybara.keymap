@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#undef ZMK_BEHAVIORS_KEEP_ALL  /* not enabling all behaviors, it works, add the #! */
+/* #undef ZMK_BEHAVIORS_KEEP_ALL   not enabling all behaviors, it works, add the #! */
 /* #define ZMK_BEHAVIORS_KEEP_KT */
 
 #include <behaviors.dtsi>
