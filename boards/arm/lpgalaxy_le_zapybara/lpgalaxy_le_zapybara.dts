@@ -96,16 +96,6 @@
         full-ohms = <(2000000 + 806000)>;
     };
 
-    aliases {
-        led0 = &blue_led;
-    };
-
-    //leds {
-    //    compatible = "gpio-leds";
-    //    blue_led: led_0 {
-    //    };
-    //};
-
     transform: transform {
         compatible = "zmk,matrix-transform";
         rows = <4>;
