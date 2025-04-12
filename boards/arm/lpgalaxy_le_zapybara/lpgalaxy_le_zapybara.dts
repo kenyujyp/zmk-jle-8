@@ -65,16 +65,6 @@
             , <&right_mux 7 0>                  \
             , <&right_mux 6 0>                  \
         ;                                       \
-        strobe-gpios                           \
-        = <&gpio0 13  (GPIO_ACTIVE_HIGH| NRF_GPIO_DRIVE_H0H1)>  \
-        , <&gpio0 24 (GPIO_ACTIVE_HIGH| NRF_GPIO_DRIVE_H0H1)>   \
-        , <&gpio0 3  (GPIO_ACTIVE_HIGH| NRF_GPIO_DRIVE_H0H1)>   \
-        , <&gpio1 6  (GPIO_ACTIVE_HIGH| NRF_GPIO_DRIVE_H0H1)>   \
-        , <&gpio1 11  (GPIO_ACTIVE_HIGH| NRF_GPIO_DRIVE_H0H1)>  \
-        ;                                                        \
-                                                                  \      
-        drain-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | NRF_GPIO_DRIVE_H0H1)>;      \
-        power-gpios = <&gpio1 13 (GPIO_ACTIVE_HIGH | NRF_GPIO_DRIVE_H0H1)>;     \
         io-channels = <&adc 1>;                     \
         matrix-relax-us = <3>;                      \
         matrix-warm-up-us = <500>;                  \

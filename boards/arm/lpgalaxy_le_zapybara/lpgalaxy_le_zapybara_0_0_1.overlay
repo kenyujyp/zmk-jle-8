@@ -42,20 +42,18 @@
 };
 
 /* kscan? row gpios 5 rows*/
-/*
- * &matrix {
- *   strobe-gpios
- *       = <&gpio0 13  (GPIO_ACTIVE_HIGH| NRF_GPIO_DRIVE_H0H1)>
- *       , <&gpio0 24 (GPIO_ACTIVE_HIGH| NRF_GPIO_DRIVE_H0H1)>
- *       , <&gpio0 3  (GPIO_ACTIVE_HIGH| NRF_GPIO_DRIVE_H0H1)>
- *       , <&gpio1 6  (GPIO_ACTIVE_HIGH| NRF_GPIO_DRIVE_H0H1)>
- *       , <&gpio1 11  (GPIO_ACTIVE_HIGH| NRF_GPIO_DRIVE_H0H1)>
- *       ;
- *
- *   drain-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | NRF_GPIO_DRIVE_H0H1)>;
- *   power-gpios = <&gpio1 13 (GPIO_ACTIVE_HIGH | NRF_GPIO_DRIVE_H0H1)>;
- * };
- */
+
+&matrix {
+    strobe-gpios
+    = <&gpio0 13  (GPIO_ACTIVE_HIGH| NRF_GPIO_DRIVE_H0H1)>
+    , <&gpio0 24 (GPIO_ACTIVE_HIGH| NRF_GPIO_DRIVE_H0H1)>
+    , <&gpio0 3  (GPIO_ACTIVE_HIGH| NRF_GPIO_DRIVE_H0H1)>
+    , <&gpio1 6  (GPIO_ACTIVE_HIGH| NRF_GPIO_DRIVE_H0H1)>
+    , <&gpio1 11  (GPIO_ACTIVE_HIGH| NRF_GPIO_DRIVE_H0H1)>
+    ;
+    drain-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | NRF_GPIO_DRIVE_H0H1)>;
+    power-gpios = <&gpio1 13 (GPIO_ACTIVE_HIGH | NRF_GPIO_DRIVE_H0H1)>;
+};
 
 /*
  * maybe accelerometer related, adxl362 accelerometer initialization
