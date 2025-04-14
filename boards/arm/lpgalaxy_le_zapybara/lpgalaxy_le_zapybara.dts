@@ -64,13 +64,6 @@
             , <&right_mux 7 0>                  \
             , <&right_mux 6 0>                  \
             ;                                       \
-                                    \
-        base-scale = <1024>;        \
-        noise-floor = <50>;         \
-        idle-delay = <25>;          \
-        debounce-press = <2>;       \
-        debounce-release = <4>;     \
-                                    \
         io-channels = <&adc 1>;                     \
         matrix-relax-us = <3>;                      \
         matrix-warm-up-us = <500>;                  \
