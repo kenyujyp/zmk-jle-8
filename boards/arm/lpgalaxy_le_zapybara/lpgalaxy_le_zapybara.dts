@@ -19,7 +19,6 @@
     #address-cells = <1>;
     #size-cells = <0>;
 
-    /* no gpio address, does reg implys gpio address? */
     channel@3 {
         reg = <3>;
         zephyr,gain = "ADC_GAIN_1_6";
@@ -82,7 +81,7 @@
     compatible = "lpgalaxy,le_zapybara", "nordic,nrf52840";
 
     chosen {
-        /* zmk,kscan = &matrix; may cause problem */
+        zmk,kscan = &matrix;
         zephyr,code-partition = &code_partition;
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
@@ -117,7 +116,7 @@
     MUX(left_mux)
     MUX(right_mux)
     /* what is this? */
-    EC_MATRIX(matrix, (BIT(3) + BIT(5) + BIT(7) + BIT(10) + BIT(11) + BIT(13) + BIT(14)))
+    EC_MATRIX(matrix, (BIT(0) + BIT(1) + BIT(2) + BIT(4) + BIT(6) + BIT(8) + BIT(9) + BIT(11)+ BIT(12) + BIT(13) + BIT(14)))
 };
 
 /*
