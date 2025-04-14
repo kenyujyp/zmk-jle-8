@@ -69,7 +69,7 @@
         matrix-warm-up-us = <500>;                  \
         adc-read-settle-us = <1>;                   \
         strobe-input-masks = <0 0 0 _bottom_mask>;  \
-        sleep-after-secs = <1000>;                    \
+        sleep-after-secs = <1000>;                  \
         active-polling-interval-ms = <2>;           \
         idle-polling-interval-ms = <3>;             \
         sleep-polling-interval-ms = <4>;            \
