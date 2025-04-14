@@ -14,68 +14,17 @@
 
 
 / {
-    behaviors {
-        semi_co: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp SEMI>, <&kp COLON>;
-        };
-        apos: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp APOS>, <&kp DQT>;
-        };
-        lbkt: tap_dance_2 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LBKT>, <&kp LBRC>;
-        };
-        rbkt: tap_dance_3 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp RBKT>, <&kp RBRC>;
-        };
-        comma: tap_dance_4 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp COMMA>, <&kp LT>;
-        };
-        dot: tap_dance_5 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp DOT>, <&kp GT>;
-        };
-        flsh: tap_dance_6 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp FSLH>, <&kp QMARK>;
-        };
-        blsh: tap_dance_7 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp BSLH>, <&kp PIPE>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "default";
             bindings = <
-                &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0   &kp MINUS  &kp EQUAL  &blsh  &kp GRAVE
-                &kp TAB  &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I   &kp O   &kp P    &lbkt      &rbkt      &kp BSPC
-                &kp CAPS &kp A   &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K   &kp L   &semi_co &apos      &kp ENTER
-                &kp LSHFT &kp Z  &kp X   &kp C   &kp V   &kp B   &kp N   &kp M   &comma  &dot    &flsh    &kp UP     &kp TILDE
-                &kp LCTRL &kp LGUI  &kp LALT       &kp SPACE         &kp SPACE         &kp SPACE    &kp RSHFT &mo 1  &kp LEFT &kp DOWN &kp RIGHT
+                &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE
+                &kp TAB  &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I   &kp O   &kp P   &kp LBKT   &kp RBKT   &kp BSPC
+                &kp CAPS &kp A   &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K   &kp L   &kp SEMI &kp APOS  &kp ENTER
+                &kp LSHFT &kp Z  &kp X   &kp C   &kp V   &kp B   &kp N   &kp M  &kp COMMA &kp DOT &kp FSLH         &kp UP  &kp TILDE
+                &kp LCTRL &kp LGUI  &kp LALT       &kp SPACE         &kp SPACE         &kp SPACE    &mo 1 &kp RSHFT  &kp LEFT &kp DOWN &kp RIGHT
             >;
         };
 
