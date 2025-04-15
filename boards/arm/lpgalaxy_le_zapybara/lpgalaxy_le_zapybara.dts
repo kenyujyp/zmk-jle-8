@@ -44,7 +44,7 @@
     };
 
 /* mux pin order */
-#define EC_MATRIX(_name)                        \
+#define EC_MATRIX(_name, _row0_mask, _row1_mask, _row2_mask, _row3_mask, _bottom_mask)   \
     _name: _name {                              \
         compatible = "zmk,kscan-ec-matrix";     \
         input-gpios                             \
@@ -65,7 +65,7 @@
             , <&right_mux 6 0>                  \
             ;                                       \
         io-channels = <&adc 1>;                     \
-        strobe-input-masks = <0x0000 0x4000 0x6000 0x4800 0x04E8>;           \
+        strobe-input-masks = <_row0_mask, _row1_mask, _row2_mask, _row3_mask, _bottom_mask>;           \
         matrix-relax-us = <3>;                      \
         matrix-warm-up-us = <500>;                  \
         adc-read-settle-us = <1>;                   \
@@ -121,8 +121,7 @@
      *   0x00000004>;  // Mask column 2 in row 1,  Row 1 (s=1): Column 2 (i=2) is masked (bit 2 is set).
      */
     /* BIT(i) creates a bitmask with only the i-th bit enabled (e.g., BIT(0) = 0b0001, BIT(1) = 0b0010, BIT(2)=0b0100). */
-    //EC_MATRIX(matrix, (BIT(3) + BIT(5) + BIT(7) + BIT(10)))
-    EC_MATRIX(matrix)
+    EC_MATRIX(matrix, 0, BIT(14), (BIT(13)+BIT(14)), (BIT(11)+BIT(14)), (BIT(3)+ BIT(5)+BIT(6)+BIT(7)+BIT(10)))
 };
 
 /*
