@@ -121,7 +121,7 @@
      *   0x00000004>;  // Mask column 2 in row 1,  Row 1 (s=1): Column 2 (i=2) is masked (bit 2 is set).
      */
     /* BIT(i) creates a bitmask with only the i-th bit enabled (e.g., BIT(0) = 0b0001, BIT(1) = 0b0010, BIT(2)=0b0100). */
-    EC_MATRIX(matrix, 0, 0, 0, 0, 0 )
+    EC_MATRIX(matrix, (BIT(0) + BIT(1) + BIT(2) + BIT(3) + BIT(4) + BIT(5)))
 };
 
 /*
