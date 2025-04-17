@@ -69,11 +69,6 @@
             , <&key_physical_attrs 150 100  500  400       0     0     0>
             , <&key_physical_attrs 300 100  650  400       0     0     0>
             , <&key_physical_attrs 300 100  950  400       0     0     0>
-            , <&key_physical_attrs 100 100 1250  400       0     0     0>
-            , <&key_physical_attrs 100 100 1350  400       0     0     0>
-            , <&key_physical_attrs 100 100 1450  400       0     0     0>
-            , <&key_physical_attrs 100 100 1550  400       0     0     0>
-            , <&key_physical_attrs 100 100 1650  400       0     0     0>
             ;
     };
     position_map {
