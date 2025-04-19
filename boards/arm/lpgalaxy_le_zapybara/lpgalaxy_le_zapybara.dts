@@ -62,7 +62,6 @@
 	        , <&right_mux 2 0>                  \
 	        , <&right_mux 5 0>                  \
             , <&right_mux 7 0>                  \
-            , <&right_mux 6 0>                  \
             ;                                       \
         io-channels = <&adc 1>;                     \
         strobe-input-masks = <_row0_mask _row1_mask _row2_mask _row3_mask _bottom_mask>;           \
@@ -105,7 +104,7 @@
         columns = <15>;
 
         map = <
-        RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5) RC(0,6) RC(0,7) RC(0,8) RC(0,9) RC(0,10) RC(0,11) RC(0,12)          RC(0,14)
+        RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5) RC(0,6) RC(0,7) RC(0,8) RC(0,9) RC(0,10) RC(0,11) RC(0,12)
         RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4) RC(1,5) RC(1,6) RC(1,7) RC(1,8) RC(1,9) RC(1,10) RC(1,11) RC(1,12) RC(1,13)
         RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9) RC(2,10) RC(2,11) RC(2,12)
         RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(3,6) RC(3,7) RC(3,8) RC(3,9) RC(3,10)          RC(3,12) RC(3,13)
@@ -121,7 +120,7 @@
      *   0x00000004>;  // Mask column 2 in row 1,  Row 1 (s=1): Column 2 (i=2) is masked (bit 2 is set)
      */
     /* BIT(i) creates a bitmask with only the i-th bit enabled (e.g., BIT(0) = 0b0001, BIT(1) = 0b0010, BIT(2)=0b0100). */
-    EC_MATRIX(matrix, (BIT(13)), (BIT(14)), (BIT(13) + BIT(14)), (BIT(11) + BIT(14)), (BIT(3) + BIT(5) + BIT(6) + BIT(7) + BIT(9) + BIT(10) + BIT(11) + BIT(12) + BIT(13) + BIT(14)))
+    EC_MATRIX(matrix, (BIT(13)), 0, (BIT(13)), (BIT(11)), (BIT(3) + BIT(5) + BIT(6) + BIT(7) + BIT(9) + BIT(10) + BIT(11) + BIT(12) + BIT(13)))
 };
 
 /*
