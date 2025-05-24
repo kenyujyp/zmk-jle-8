@@ -96,7 +96,7 @@
         gpios = <&gpio1 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // Adjust pin and flags
         label = "MOTION_SENSOR";
         interrupt-parent = <&gpio1>;
-        interrupts = <4 GPIO_INT_EDGE_FALLING>; // Trigger on falling edge on pin 1.04
+        interrupts = <4 (GPIO_INT_EDGE_FALLING)>; // Trigger on falling edge on pin 1.04
     };
 
     vbatt: vbatt {
