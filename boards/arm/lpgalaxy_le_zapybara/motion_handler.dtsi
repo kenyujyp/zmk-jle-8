@@ -1,0 +1,12 @@
+#include <dt-bindings/zmk/behavior.h>
+
+/ {
+    behaviors {
+        motion_handler: motion_handler {
+            compatible = "zmk,behavior-custom";
+            label = "MOTION_HANDLER";
+            #binding-cells = <0>;
+            sensor = <&gpio_interrupt>; // Reference the GPIO interrupt node
+        };
+    };
+}

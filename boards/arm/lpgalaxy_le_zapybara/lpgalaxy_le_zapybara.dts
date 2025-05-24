@@ -21,7 +21,7 @@
 
     channel@3 {
         reg = <3>;
-        zephyr,gain = "ADC_GAIN_1_6";
+        zephyr,gain = "ADC_GAIN_1_4";
         zephyr,reference = "ADC_REF_INTERNAL";
         zephyr,acquisition-time = <ADC_ACQ_TIME(ADC_ACQ_TIME_MICROSECONDS, 40)>;
         zephyr,resolution = <12>;
@@ -29,7 +29,7 @@
 
     channel@1 {
         reg = <1>;
-        zephyr,gain = "ADC_GAIN_1_6";
+        zephyr,gain = "ADC_GAIN_1_4";
         zephyr,reference = "ADC_REF_INTERNAL";
         zephyr,acquisition-time = <ADC_ACQ_TIME(ADC_ACQ_TIME_MICROSECONDS, 3)>;
         zephyr,resolution = <12>;
@@ -76,8 +76,7 @@
     };
 
 / {
-    model = "Le Zapybara";
-    compatible = "lpgalaxy,le_zapybara", "nordic,nrf52840";
+    compatible = "nordic,nrf52840";
 
     chosen {
         zmk,kscan = &matrix;
@@ -90,12 +89,30 @@
 	    zmk,physical-layout = &layout_0;
     };
 
+    // Example: Configure PA0 as an interrupt pin
+    gpio_interrupt: gpio_interrupt_0 {
+        compatible = "zmk,gpio-interrupt";
+        gpios = <&gpio1 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // Adjust pin and flags
+        label = "MOTION_SENSOR";
+        interrupt-parent = <&gpio1>;
+        interrupts = <4 GPIO_IRQ_EDGE_FALLING>; // Trigger on falling edge on pin 1.04
+    };
+
     vbatt: vbatt {
         compatible = "voltage-divider";
         io-channels = <&adc 3>;
         
         output-ohms = <2000000>;
         full-ohms = <(2000000 + 806000)>;
+    };
+
+    // Example: Configure PA0 as an interrupt pin
+    gpio_interrupt: gpio_interrupt_0 {
+        compatible = "zmk,gpio-interrupt";
+        gpios = <&gpio1 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  // pin default pull up
+        label = "MOTION_SENSOR";
+        interrupt-parent = <&gpio1>;
+        interrupts = <0 GPIO_IRQ_EDGE_FALLING>; // Trigger on rising edge
     };
 
     transform: transform {

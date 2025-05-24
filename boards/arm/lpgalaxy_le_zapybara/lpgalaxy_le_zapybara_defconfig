@@ -9,6 +9,9 @@ CONFIG_ARM_MPU=y
 
 # Enable during calibration. do not use! compile error!
 #CONFIG_ZMK_USB_LOGGING=y
+CONFIG_LOG=y
+CONFIG_ZMK_LOG_LEVEL_DBG=y
+CONFIG_LOG_PRINTK=y
 
 # enable GPIO
 CONFIG_PINCTRL=y
