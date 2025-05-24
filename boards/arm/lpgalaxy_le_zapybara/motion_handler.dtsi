@@ -1,4 +1,4 @@
-#include <dt-bindings/zmk/behavior.h>
+#include <zmk/behavior.h>
 
 / {
     behaviors {
