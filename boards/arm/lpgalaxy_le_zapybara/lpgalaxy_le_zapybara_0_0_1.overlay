@@ -41,7 +41,7 @@
     en-gpios = <&gpio1 10 GPIO_ACTIVE_LOW>;
 };
 
-/* kscan? row gpios 5 rows*/
+/* kscan? row gpios 5 rows */
 
 &matrix {
     strobe-gpios

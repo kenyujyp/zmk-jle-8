@@ -98,15 +98,6 @@
         full-ohms = <(2000000 + 806000)>;
     };
 
-    // Example: Configure PA0 as an interrupt pin
-    gpio_interrupt: gpio_interrupt_0 {
-        compatible = "zmk,gpio-interrupt";
-        gpios = <&gpio1 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  // pin default pull up
-        label = "MOTION_SENSOR";
-        interrupt-parent = <&gpio1>;
-        interrupts = <0 GPIO_IRQ_EDGE_FALLING>; // Trigger on rising edge
-    };
-
     transform: transform {
         compatible = "zmk,matrix-transform";
         rows = <5>;
