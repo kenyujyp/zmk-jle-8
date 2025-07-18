@@ -93,9 +93,18 @@
     vbatt: vbatt {
         compatible = "zmk,battery-voltage-divider";
         io-channels = <&adc 3>;
-        
         output-ohms = <2000000>;
         full-ohms = <(2000000 + 806000)>;
+    };
+
+    /* motion sensor interrupt */
+    motion_interrupt_pin: motion_interrupt {
+        compatible = "gpio-keys";
+        my_pin: my_pin {
+            label = "Interrupt Pin";
+            gpios = <&gpio1 40 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+            interrupts = <5 GPIO_EDGE_RISING>;
+        };
     };
 
     transform: transform {
