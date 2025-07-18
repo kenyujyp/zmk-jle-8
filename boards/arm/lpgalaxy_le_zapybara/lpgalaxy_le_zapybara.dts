@@ -103,7 +103,6 @@
         my_pin: my_pin {
             label = "Interrupt Pin";
             gpios = <&gpio1 40 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-            interrupts = <5 GPIO_EDGE_RISING>;
         };
     };
 
