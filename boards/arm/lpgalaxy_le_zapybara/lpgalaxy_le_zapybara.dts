@@ -104,6 +104,7 @@
             label = "Interrupt Pin";
             gpios = <&gpio1 40 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
         };
+        wakeup-source;
     };
 
     transform: transform {
