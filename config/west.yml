@@ -10,7 +10,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: core/move-to-zephyr-4-1
+      revision: main
       import: app/west.yml
     - name: ec-support-zmk-module
       remote: petejohanson
