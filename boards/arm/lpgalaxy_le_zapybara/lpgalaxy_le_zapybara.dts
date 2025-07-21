@@ -101,7 +101,6 @@
     motion_interrupt_pin: motion_interrupt {
         compatible = "gpio-keys";
         my_pin: my_pin {
-            label = "Interrupt Pin";
             gpios = <&gpio1 40 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
         };
         wakeup-source;
