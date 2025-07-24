@@ -20,12 +20,14 @@ static void motion_isr(const struct device *dev, struct gpio_callback *cb, uint3
     }
 }
 
+/* soft interrupt trigger */
 void trigger_motion_isr_soft(void) {
     const struct device *fake_dev = motion_pin.port;
     uint32_t fake_pins = BIT(motion_pin.pin);
     motion_isr(fake_dev, &motion_cb, fake_pins);
 }
 
+/* hard interrupt init */
 static int init_motion_interrupt(const struct device *dev) {
     ARG_UNUSED(dev);
     
@@ -49,7 +51,7 @@ static int init_motion_interrupt(const struct device *dev) {
 
 SYS_INIT(init_motion_interrupt, APPLICATION, CONFIG_APPLICATION_INIT_PRIORITY);
 
-/* Shell Command Implementation */
+/* Shell Command Implementation that calls above defined function */
 static int cmd_trigger_motion(const struct shell *sh, size_t argc, char **argv) {
     ARG_UNUSED(argc);
     ARG_UNUSED(argv);
@@ -60,7 +62,8 @@ static int cmd_trigger_motion(const struct shell *sh, size_t argc, char **argv) 
 }
 
 /* Create shell command structure */
-SHELL_CMD_ARG_REGISTER(trigger_motion, NULL, "Trigger motion ISR", cmd_trigger_motion, 1, 0);
+/* Creating root (level 0) command "trigger_motion" without a handler (fouth param is handler) */
+SHELL_CMD_REGISTER(trigger_motion, NULL, "Trigger motion ISR", NULL);
 
 /* Explicit shell registration */
 static int register_shell_commands(const struct device *dev) {

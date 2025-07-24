@@ -37,3 +37,6 @@ CONFIG_FLASH_MAP=y
 
 # enable CALIBRATOR VERBOSE MODE, only when calibration is needed
 CONFIG_ZMK_KSCAN_EC_MATRIX_VERBOSE_CALIBRATOR=y
+
+# shell command auto complete
+CONFIG_SHELL_TAB=y
