@@ -1,1 +1,0 @@
-target_sources(app PRIVATE src/interrupt_handler.c)

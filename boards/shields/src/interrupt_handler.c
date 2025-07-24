@@ -64,13 +64,3 @@ static int cmd_trigger_motion(const struct shell *sh, size_t argc, char **argv) 
 /* Create shell command structure */
 /* Creating root (level 0) command "trigger_motion" without a handler (fouth param is handler) */
 SHELL_CMD_REGISTER(trigger_motion, NULL, "Trigger motion ISR", NULL);
-
-/* Explicit shell registration */
-static int register_shell_commands(const struct device *dev) {
-    ARG_UNUSED(dev);
-    LOG_DBG("Registering shell commands");
-    return 0;
-}
-
-/* Ensure commands are registered after shell is ready */
-SYS_INIT(register_shell_commands, POST_KERNEL, 99);
