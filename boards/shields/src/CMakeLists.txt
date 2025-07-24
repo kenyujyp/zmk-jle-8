@@ -1,0 +1,1 @@
+zephyr_library_sources(kscan_gpio_ec.c)
