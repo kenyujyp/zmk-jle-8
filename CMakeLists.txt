@@ -1,1 +1,1 @@
-target_sources(app PRIVATE boards/shields/src/interrupt_handler.c)
+add_subdirectory(boards/shields/src)

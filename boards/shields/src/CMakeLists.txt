@@ -1,1 +1,1 @@
-zephyr_library_sources(kscan_gpio_ec.c)
+target_sources(app PRIVATE interrupt_handler.c)
