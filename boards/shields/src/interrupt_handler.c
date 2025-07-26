@@ -64,3 +64,6 @@ static int cmd_trigger_motion(const struct shell *sh, size_t argc, char **argv) 
 /* Create shell command structure */
 /* Creating root (level 0) command "trigger_motion" without a handler (fouth param is handler) */
 SHELL_CMD_REGISTER(trigger_motion, NULL, "Trigger motion ISR", NULL);
+
+dslkfjkdsfjksd djskjf ;
+ GPIO  why
