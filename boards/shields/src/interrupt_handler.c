@@ -52,7 +52,8 @@ static int init_motion_interrupt(const struct device *dev) {
 SYS_INIT(init_motion_interrupt, APPLICATION, CONFIG_APPLICATION_INIT_PRIORITY);
 
 /* Shell Command Implementation that calls above defined function */
-static int cmd_trigger_motion(const struct shell *sh, size_t argc, char **argv) {
+/* no dash _ in command name */
+static int cmd_triggermotion(const struct shell *sh, size_t argc, char **argv) {
     ARG_UNUSED(argc);
     ARG_UNUSED(argv);
     
@@ -62,8 +63,8 @@ static int cmd_trigger_motion(const struct shell *sh, size_t argc, char **argv) 
 }
 
 /* Create shell command structure */
-/* Creating root (level 0) command "trigger_motion" without a handler (fouth param is handler) */
-SHELL_CMD_REGISTER(trigger_motion, NULL, "Trigger motion ISR", NULL);
+/* Creating root (level 0) command "trigger_motion" with handler function (fouth param is handler) */
+SHELL_CMD_REGISTER(triggermotion, NULL, "Trigger motion ISR", cmd_triggermotion);
 
 dslkfjkdsfjksd djskjf ;
  GPIO  why
