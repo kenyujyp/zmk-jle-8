@@ -13,10 +13,10 @@
 #
 ---
 include:
-  - board: lpgalaxy_le_zapybara@0.0.1
+  - board: lpgalaxy_le_zapybara
     snippet: zmk-usb-logging
     #cmake-args: -DZMK_LOG_LEVEL=DBG
-  - board: lpgalaxy_le_zapybara@0.0.1
+  - board: lpgalaxy_le_zapybara
     snippet: enable_ec_calibrator zmk-usb-logging
     artifact-name: lpgalaxy_le_zapybara_calibrator
     cmake-args: -DZMK_EXTRA_MODULES="${GITHUB_WORKSPACE}/config/shell_cmd/" 

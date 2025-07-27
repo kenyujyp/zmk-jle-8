@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: MIT
 
 config BOARD_LPGALAXY_LE_ZAPYBARA
-    bool "Le Zapybara"
+    bool "Lpgalaxy Le Zapybara"
     select ZMK_KSCAN_EC_MATRIX_FAKE_OPEN_DRAIN
     imply ZMK_KSCAN_EC_MATRIX_DYNAMIC_POLL_RATE
 #   imply SPI
