@@ -6,6 +6,18 @@
 #    default y
 #    depends on BOARD_LPGALAXY_LE_ZAPYBARA
 
+if SHIELD_LPGALAXY_LE_ZAPYBARA
 
-config SHIELD_LPGALAXY_LE_ZAPYBARA
-    def_bool $(shields_list_contains,lpgalaxy_le_zapybara)
+config ZMK_KEYBOARD_NAME
+  default "ec60ble"
+
+endif
+
+
+if ZMK_BATTERY_REPORTING
+
+choice ZMK_BATTERY_REPORTING_FETCH_MODE
+	default ZMK_BATTERY_REPORTING_FETCH_MODE_LITHIUM_VOLTAGE
+endchoice
+
+endif
