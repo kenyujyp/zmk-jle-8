@@ -9,6 +9,7 @@
 #include <zephyr/dt-bindings/gpio/nordic-nrf-gpio.h>
 
 #include <freq.h>
+#include "lpgalaxy_le_zapybara.dts"
 
 &adc {
     // Battery Sensing
